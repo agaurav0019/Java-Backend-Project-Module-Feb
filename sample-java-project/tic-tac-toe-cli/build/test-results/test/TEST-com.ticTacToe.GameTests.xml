@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ticTacToe.GameTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-05-03T11:06:05.779Z" hostname="MacBook-Air.local" time="0.01">
+  <properties/>
+  <testcase name="throwsExceptionForInvalidBoxAttempt()" classname="com.ticTacToe.GameTests" time="0.008"/>
+  <testcase name="canMarkBoxesViaAttempts()" classname="com.ticTacToe.GameTests" time="0.001"/>
+  <testcase name="canCreateNewGame()" classname="com.ticTacToe.GameTests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
