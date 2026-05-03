@@ -45,4 +45,13 @@ public class Game {
             nextTurn = p1;
         }
     }
+
+    /*
+    * check board state and tells if any winners
+    * @return p1 or p2 whoever has won; or null if no winner yet
+     */
+    public Player checkVictory() {
+//        TODO
+        return null;
+    }
 }
