@@ -26,4 +26,27 @@ public class TasksController {
         TaskEntity savedTask = taskService.addNewTask(body.name);
         return ResponseEntity.created(URI.create(Constants.BASE_URL + "/tasks/" + savedTask.getId())).body(savedTask);
     }
+
+    @GetMapping("/{id}")
+    ResponseEntity<TaskEntity> getTaskById(@PathVariable Long id) {
+
+        TaskEntity task = taskService.getTaskById(id);
+
+        if (task == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.ok(task);
+    }
+
+    @DeleteMapping("/{id}")
+    ResponseEntity<Void> deleteTaskById(@PathVariable Long id) {
+        Boolean deleted = taskService.deleteTaskById(id);
+
+        if (deleted) {
+            return ResponseEntity.noContent().build();
+        }
+
+        return ResponseEntity.notFound().build();
+    }
 }
